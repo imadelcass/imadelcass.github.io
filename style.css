@@ -1,0 +1,111 @@
+/* font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
+
+/* Variabls */
+:root{
+    /* background-color */
+    --light-sky-bg: rgba(135, 196, 207, 0.3);
+    /* colors */
+    --gold-dark: rgb(141, 105, 7);
+    --blue-dark: rgb(31, 78, 87);
+    --blue-shadow: rgb(24, 44, 47);
+    --gray-sky: rgba(116, 114, 114, 0.808);
+    --gray-comment: rgba(71, 70, 70, 0.972);
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+body{
+    background-color: var(--light-sky-bg);
+}
+.container{
+    width: 120vh;
+    margin: auto;
+    margin-top: 60px;
+}
+/* header */
+.menu-header{
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 40px;
+}
+.menu-header .title{
+    font-size: 40px;
+    font-weight: 600;
+    color: var(--blue-shadow);
+    position: relative;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+}
+.menu-header .title::after{
+    position: absolute;
+    content: '';
+    width: 80px;
+    height: 3px;
+    right: 41%;
+    bottom: -5px;
+    background-color: var(--gold-dark);
+}
+.btns-filter button{
+    color: var(--gold-dark);
+    border: solid 1px var(--gold-dark);
+    padding: 6px 8px;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.527);
+    margin: 0 5px;
+}
+.btns-filter button:hover{
+    background: var(--gold-dark);
+    border: solid 1px var(--gold-dark);
+    padding: 6px 8px;
+    color: rgba(255, 255, 255, 0.849);
+    margin: 0 5px;
+    cursor: pointer;
+}
+.btns-filter button:focus{
+    outline: none;
+}
+/* menu body */
+.row{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 20px;
+}
+.card{
+    display: flex;
+    margin-bottom: 50px;
+}
+.card .card-img{
+    width: 160px;
+    height: 110px;
+    border: solid 3px var(--gold-dark);
+    border-radius: 5px;
+}
+.card-body{
+    margin-left: 15px;
+}
+.card-body .card-title{
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    letter-spacing: 3px;
+    border-bottom: solid 1px var(--gray-sky);
+    padding-bottom: 5px;
+    width: 340px;
+}
+.card-title .price{
+    position: relative;
+    bottom: -3px;
+    color: var(--gold-dark);
+    font-weight: 800;
+}
+.card-body .card-text{
+    padding: 15px 0;
+    font-size: 14px;
+    color: var(--gray-comment);
+    font-weight: 500;
+}

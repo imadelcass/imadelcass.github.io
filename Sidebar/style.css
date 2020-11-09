@@ -1,0 +1,73 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+}
+body{
+    background-color: rgb(211, 227, 253);
+}
+.header{
+    display: block;
+    height: 8vh;
+    align-items: center;
+}
+.burger{
+    position: absolute;
+    right: 20px;
+    top: 30px;
+    cursor: pointer;
+    animation-name: burgerAnime;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+}
+@keyframes burgerAnime{
+    0%{font-size: 20px;}
+    100%{font-size: 40px;}
+}
+.burger>div{
+    width: 22px;
+    height: 3px;
+    margin: 3px;
+    background-color: #000; 
+}
+.side-bar{
+    display: none;
+}
+.side-bar{
+    width: 50vh;
+    padding: 20px;
+    background-color: #fff;
+    height: 100vh;
+}
+.sideBar-top{
+    display: flex;
+    justify-content: space-between;
+}
+.sideBar-top h1{
+    position: relative;
+    top: 13px;
+    cursor: pointer;
+    font-size: 25px;
+    animation-name: myanimation;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+@keyframes myanimation{
+
+    100%{transform: rotate(365deg);}
+}
+.logo img{
+    width: 200px;
+    margin-bottom: 40px;
+}
+.nav-list li{
+    list-style: none;
+    text-decoration: none;
+    padding-bottom: 30px;
+}
+.nav-list li a{
+    text-decoration: none;
+    font-size: 28px;
+    color: lightslategrey;
+}

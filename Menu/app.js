@@ -1,127 +1,118 @@
 const menu = [
   {
     id: 1,
-    title: "buttermilk pancakes",
-    category: "breakfast",
+    title: 'buttermilk pancakes',
+    category: 'breakfast',
     price: 15.99,
-    img: "./img/item-1.jpeg",
+    img: './img/item-1.jpeg',
     desc: `I'm baby woke mlkshk wolf bitters live-edge blue bottle, hammock freegan copper mug whatever cold-pressed `,
   },
   {
     id: 2,
-    title: "diner double",
-    category: "lunch",
+    title: 'diner double',
+    category: 'lunch',
     price: 13.99,
-    img: "./img/item-2.jpeg",
+    img: './img/item-2.jpeg',
     desc: `vaporware iPhone mumblecore selvage raw denim slow-carb leggings gochujang helvetica man braid jianbing. Marfa thundercats `,
   },
   {
     id: 3,
-    title: "godzilla milkshake",
-    category: "shakes",
+    title: 'godzilla milkshake',
+    category: 'shakes',
     price: 6.99,
-    img: "./img/item-3.jpeg",
+    img: './img/item-3.jpeg',
     desc: `ombucha chillwave fanny pack 3 wolf moon street art photo booth before they sold out organic viral.`,
   },
   {
     id: 4,
-    title: "country delight",
-    category: "breakfast",
+    title: 'country delight',
+    category: 'breakfast',
     price: 20.99,
-    img: "./img/item-4.jpeg",
+    img: './img/item-4.jpeg',
     desc: `Shabby chic keffiyeh neutra snackwave pork belly shoreditch. Prism austin mlkshk truffaut, `,
   },
   {
     id: 5,
-    title: "egg attack",
-    category: "lunch",
+    title: 'egg attack',
+    category: 'lunch',
     price: 22.99,
-    img: "./img/item-5.jpeg",
+    img: './img/item-5.jpeg',
     desc: `franzen vegan pabst bicycle rights kickstarter pinterest meditation farm-to-table 90's pop-up `,
   },
   {
     id: 6,
-    title: "oreo dream",
-    category: "shakes",
+    title: 'oreo dream',
+    category: 'shakes',
     price: 18.99,
-    img: "./img/item-6.jpeg",
+    img: './img/item-6.jpeg',
     desc: `Portland chicharrones ethical edison bulb, palo santo craft beer chia heirloom iPhone everyday`,
   },
   {
     id: 7,
-    title: "bacon overflow",
-    category: "breakfast",
+    title: 'bacon overflow',
+    category: 'breakfast',
     price: 8.99,
-    img: "./img/item-7.jpeg",
+    img: './img/item-7.jpeg',
     desc: `carry jianbing normcore freegan. Viral single-origin coffee live-edge, pork belly cloud bread iceland put a bird `,
   },
   {
     id: 8,
-    title: "american classic",
-    category: "lunch",
+    title: 'american classic',
+    category: 'lunch',
     price: 12.99,
-    img: "./img/item-8.jpeg",
+    img: './img/item-8.jpeg',
     desc: `on it tumblr kickstarter thundercats migas everyday carry squid palo santo leggings. Food truck truffaut  `,
   },
   {
     id: 9,
-    title: "quarantine buddy",
-    category: "shakes",
+    title: 'quarantine buddy',
+    category: 'shakes',
     price: 16.99,
-    img: "./img/item-9.jpeg",
+    img: './img/item-9.jpeg',
     desc: `skateboard fam synth authentic semiotics. Live-edge lyft af, edison bulb yuccie crucifix microdosing.`,
   },
-  {
-    id: 10,
-    title: "loubia",
-    category: "athan",
-    price: 16.99,
-    img: "./img/item-10.jpg",
-    desc: `loubya sank sank mliiiiiiihha.`,
-  }
 ];
 
 const row = document.querySelector('.row');
 const btnParent = document.querySelector('.btns-filter');
 
-window.addEventListener('DOMContentLoaded', ()=>{
-  card(menu)
-})
+window.addEventListener('DOMContentLoaded', () => {
+  card(menu);
+});
 
-const short = menu.reduce((newArr, item) =>{
+const short = menu.reduce(
+  (newArr, item) => {
+    if (!newArr.includes(item.category)) {
+      newArr.push(item.category);
+    }
+    return newArr;
+  },
+  ['all']
+);
 
-  if(!newArr.includes(item.category)){
-    newArr.push(item.category);
-  }
-  return newArr;
-
-},["all"]);
-
-short.forEach((categori)=> {
-
+short.forEach(categori => {
   let btn = document.createElement('button');
   btn.textContent = categori;
   btn.setAttribute('data-id', categori);
   btnParent.appendChild(btn);
 
-  btn.addEventListener('click',(e)=>{
+  btn.addEventListener('click', e => {
     let categorie = e.currentTarget.dataset.id;
 
-    let filterArr = menu.filter((item)=>{
-      if(item.category == categorie){
+    let filterArr = menu.filter(item => {
+      if (item.category == categorie) {
+        return item;
+      } else if (categorie == 'all') {
         return item;
       }
-      else if(categorie == "all"){
-        return item;
-      }
-    })
+    });
     card(filterArr);
-  })
+  });
 });
 
-function card (menuItems){
-  let displayMenu = menuItems.map((item) => {
-    return  `<div class="card">
+function card(menuItems) {
+  let displayMenu = menuItems.map(item => {
+    return `<div class="card">
                 <img class="card-img" src="${item.img}" alt="${item.title}">
                 <div class="card-body">
                     <div class="card-title">
@@ -132,50 +123,8 @@ function card (menuItems){
                         ${item.desc}
                     </p>
                 </div>
-            </div>`
-    })
-    
-    row.innerHTML = displayMenu.join('');
+            </div>`;
+  });
+
+  row.innerHTML = displayMenu.join('');
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

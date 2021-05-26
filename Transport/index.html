@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Bootstrap CSS -->
+    <!-- Font awesome -->
+    <script
+      src="https://kit.fontawesome.com/a74397ea9d.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <title>cool</title>
+  </head>
+  <body>
+    <header>
+      <!-- NavbarUpper Start -->
+      <div class="navbarUpper">
+        <div class="navbarUpper__blank">
+          <div class="navbarUppar__green"></div>
+        </div>
+        <ul class="navbarUpper__items">
+          <li class="navbarUpper__item">
+            <a href="#" class="navbarUpper__link">
+              <i class="fas fa-phone-alt"></i>
+              <span>212 544 478 588</span>
+            </a>
+          </li>
+          <li class="navbarUpper__item">
+            <a href="#" class="navbarUpper__link">
+              <i class="fas fa-envelope"></i>
+              <span>contact</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <!-- NavbarUpper End -->
+      <!-- Navbar Start -->
+      <div class="navbar__sticky">
+        <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="./index.html">
+              <img src="./img/img.png" alt="" width="80" height="60" />
+            </a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ms-auto mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="./index.html"
+                    >Home</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./servises.html">Services</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link" href="./contact.html"> Contact </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <!-- Navbar End -->
+    </header>
+    <!-- Carousel Start -->
+    <div
+      id="carouselExampleFade"
+      class="carousel slide carousel-fade"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-inner">
+        <!-- <div class="carousel-item">
+          <img src="./img/bg.jpg" class="d-block w-100" alt="bg1" />
+          <div class="carousel-caption d-md-block">
+            <h5>First slide label</h5>
+            <p>Some representative placeholder content for the first slide.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="./img/bg2.jpg" class="d-block w-100" alt="bg2" />
+          <div class="carousel-caption d-md-block">
+            <h5>second slide label</h5>
+            <p>Some representative placeholder content for the first slide.</p>
+          </div>
+        </div> -->
+        <div class="carousel-item active">
+          <img src="./img/bg.jpg" class="d-block w-100" alt="bg3" />
+          <div class="carousel-caption d-md-block">
+            <h5>third slide label</h5>
+            <p>Some representative placeholder content for the first slide.</p>
+          </div>
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleFade"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleFade"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <!-- Carousel End -->
+    <!-- Reference Start-->
+    <section class="reference">
+      <h1>Nos références</h1>
+      <!-- Slider main container -->
+      <div class="swiper-container">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">
+            <img src="./img/reference/CFD.png" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./img/reference/CSM.png" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./img/reference/DACHSER.png" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./img/reference/DHL.png" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./img/reference/EUROMAR.png" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./img/reference/GOLDEN-PLANT.png" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./img/reference/GREEN-TABLE.png" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./img/reference/MAROTRANS.png" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./img/reference/MOYSEAFOOD.png" alt="" />
+          </div>
+        </div>
+        <!-- If we need pagination -->
+        <!-- <div class="swiper-pagination"></div> -->
+
+        <!-- If we need navigation buttons -->
+        <!-- <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div> -->
+
+        <!-- If we need scrollbar -->
+        <!-- <div class="swiper-scrollbar"></div> -->
+      </div>
+    </section>
+    <!-- Reference End-->
+    <!-- Cards Start -->
+    <div class="cards">
+      <div class="card-group">
+        <div class="card">
+          <div class="cards__img"></div>
+          <div class="cards__inner">
+            <h1>Ocean Freight</h1>
+            <p>
+              We treat our customers, employees and business partners with
+              respect and our relationship with them is based on an open
+              dialogue.
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="cards__img"></div>
+          <div class="cards__inner">
+            <h1>Ocean Freight</h1>
+            <p>
+              We treat our customers, employees and business partners with
+              respect and our relationship with them is based on an open
+              dialogue.
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="cards__img"></div>
+          <div class="cards__inner">
+            <h1>Ocean Freight</h1>
+            <p>
+              We treat our customers, employees and business partners with
+              respect and our relationship with them is based on an open
+              dialogue.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Cards End -->
+    <!-- Welcom section Start-->
+    <section class="welcom">
+      <div class="welcom__img">
+        <img src="./img/bg.jpg" alt="" />
+      </div>
+      <div class="Welcom__info">
+        <h4 class="font__h3">WELCOME TO EROO</h4>
+        <h1 class="font__h1">HIGHEST CREATIVE STANDARDS</h1>
+        <p class="font__p">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum
+          eveniet ipsam aperiam, fugit expedita quam perspiciatis itaque ipsum
+          explicabo vel dolor similique rem maiores sint architecto quod
+          pariatur! Sunt, ad. Lorem ipsum dolor sit amet consectetur adipisicing
+          elit. Fugiat autem laboriosam voluptates qui expedita ipsam.
+        </p>
+        <div
+          data-aos="fade-left"
+          data-aos-duration="3000"
+          data-aos-once="true"
+          class="welcom__experience"
+        >
+          <i class="fas fa-lightbulb"></i>
+          <div class="welcom__years">
+            <h3 class="font__h2">42</h3>
+            <p class="font__p">YEAR OF EXPERIENCED</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Welcom section End-->
+    <!-- Gallery start -->
+    <section class="gallery">
+      <div class="gallery__wrapper"></div>
+      <div class="container">
+        <div class="row gallery__inner">
+          <div class="col-12 col-lg-6">
+            <div class="row">
+              <div class="col-12 col-md-3 col-lg-6">
+                <div class="gallery__ImgWrapper">
+                  <img src="./img/bg.jpg" alt="" />
+                  <div class="gallery__allmedia">
+                    <div class="gallery__media">
+                      <div class="gallery__mediaItem">
+                        <i class="fab fa-facebook"></i>
+                      </div>
+                      <div class="gallery__mediaItem">
+                        <i class="fab fa-twitter"></i>
+                      </div>
+                      <div class="gallery__mediaItem">
+                        <i class="fab fa-instagram"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-3 col-lg-6">
+                <div class="gallery__ImgWrapper">
+                  <img src="./img/bg.jpg" alt="" />
+                  <div class="gallery__allmedia">
+                    <div class="gallery__media">
+                      <div class="gallery__mediaItem">
+                        <i class="fab fa-facebook"></i>
+                      </div>
+                      <div class="gallery__mediaItem">
+                        <i class="fab fa-twitter"></i>
+                      </div>
+                      <div class="gallery__mediaItem">
+                        <i class="fab fa-instagram"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-6 col-lg-6">
+                <div class="gallery__ImgWrapper">
+                  <img src="./img/bg.jpg" alt="" />
+                  <div class="gallery__allmedia">
+                    <div class="gallery__media">
+                      <div class="gallery__mediaItem">
+                        <i class="fab fa-facebook"></i>
+                      </div>
+                      <div class="gallery__mediaItem">
+                        <i class="fab fa-twitter"></i>
+                      </div>
+                      <div class="gallery__mediaItem">
+                        <i class="fab fa-instagram"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-3 col-lg-6">
+                <div class="gallery__ImgWrapper">
+                  <img src="./img/bg.jpg" alt="" />
+                  <div class="gallery__allmedia">
+                    <div class="gallery__media">
+                      <div class="gallery__mediaItem">
+                        <i class="fab fa-facebook"></i>
+                      </div>
+                      <div class="gallery__mediaItem">
+                        <i class="fab fa-twitter"></i>
+                      </div>
+                      <div class="gallery__mediaItem">
+                        <i class="fab fa-instagram"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-6 col-lg-6">
+                <div class="gallery__ImgWrapper">
+                  <img src="./img/bg.jpg" alt="" />
+                  <div class="gallery__allmedia">
+                    <div class="gallery__media">
+                      <div class="gallery__mediaItem">
+                        <i class="fab fa-facebook"></i>
+                      </div>
+                      <div class="gallery__mediaItem">
+                        <i class="fab fa-twitter"></i>
+                      </div>
+                      <div class="gallery__mediaItem">
+                        <i class="fab fa-instagram"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-3 col-lg-6">
+                <div class="gallery__ImgWrapper">
+                  <img src="./img/bg.jpg" alt="" />
+                  <div class="gallery__allmedia">
+                    <div class="gallery__media">
+                      <div class="gallery__mediaItem">
+                        <i class="fab fa-facebook"></i>
+                      </div>
+                      <div class="gallery__mediaItem">
+                        <i class="fab fa-twitter"></i>
+                      </div>
+                      <div class="gallery__mediaItem">
+                        <i class="fab fa-instagram"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6 gallery__right">
+            <div class="col-lg-12 gallery__para font__p">
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Similique quisquam aut veniam assumenda sint. Qui nemo placeat
+                molestias magnam. Tempora, sunt veritatis.
+              </p>
+              <button class="gallery__btn">Learn More</button>
+            </div>
+            <div
+              class="col-lg-12 gallery__title"
+              data-aos="fade-left"
+              data-aos-duration="3000"
+            >
+              <div class="gallery__titleWrapper">
+                <div class="gallery__titleInner">
+                  <h1 class="font__h1">Worldwide Shipping</h1>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Gallery End -->
+    <div class="return__top">
+      <i class="fas fa-arrow-up"></i>
+    </div>
+    <!-- parallax start-->
+    <div class="parallax">
+      <div data-aos="fade-right" class="parallax__inner">
+        <h1>sté. EL YAMA TRANSPORT</h1>
+        <p>Nous créons des sourires plus beaux et plus lumineux</p>
+      </div>
+    </div>
+    <!-- parallax end-->
+    <!-- Footer Start-->
+    <footer class="footer">
+      <div class="footer__upper">
+        <div class="media">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+        <div class="logo">
+          <img src="./img/img.png" alt="logo" />
+        </div>
+        <div class="work">
+          <h5>transport & logistique</h5>
+        </div>
+      </div>
+      <div class="footer__contact">
+        <div class="mail">
+          <i class="far fa-envelope"></i>
+          <h5>mail</h5>
+          <h6>jhondoe@gmail.com</h6>
+        </div>
+        <div class="phone">
+          <i class="fas fa-phone-alt"></i>
+          <h5>contact</h5>
+          <h6>+05 789 587 98</h6>
+        </div>
+        <div class="map">
+          <i class="fas fa-map-marker-alt"></i>
+          <h5>find us</h5>
+          <h6>jhondoe@gmail.com</h6>
+        </div>
+      </div>
+      <div class="footer__copy">
+        <div class="copy__text">
+          Copyright &copy; <span class="copyright__year"></span>
+          <span class="brand">EL YAMA TRANSPORT</span> All right Reserved By
+          IMAD EL CASS
+        </div>
+      </div>
+    </footer>
+    <!-- Footer End -->
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+    -->
+    <!-- Custom JS -->
+    <script src="./index.js"></script>
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <!-- Swiper -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+      const swiper = new Swiper('.swiper-container', {
+        slidesPerView: 3,
+        spaceBetween: 10,
+        loop: true,
+        autoplay: {
+          delay: 2000,
+          disableOnInteraction: true,
+        },
+        breakpoints: {
+          640: {
+            slidesPerView: 4,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 4,
+            spaceBetween: 40,
+          },
+          1024: {
+            slidesPerView: 6,
+            spaceBetween: 70,
+          },
+        },
+        // Optional parameters
+        direction: 'horizontal',
+
+        // And if we need scrollbar
+        scrollbar: {
+          el: '.swiper-scrollbar',
+        },
+      });
+    </script>
+    <script>
+      AOS.init({
+        duration: 2000,
+        once: true,
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,127 @@
+:root {
+  --font-one: 20px;
+  --font-h1: 30px;
+  --color-firebase: #ffcb2c;
+}
+.contact {
+  width: 100%;
+  height: 500px;
+  background: url('./img/bg2.jpg') no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: 1;
+}
+.contact::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #33333398;
+  z-index: -1;
+}
+.contact__info {
+  color: #fff;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.contact__info > h1 {
+  letter-spacing: 8px;
+  font-size: 55px;
+  position: relative;
+}
+.contact__info > h1::before {
+  content: '';
+  position: absolute;
+  width: 70px;
+  height: 4px;
+  left: 29%;
+  transform: translateX(-50%);
+  bottom: 0;
+  background-color: var(--color-firebase);
+  z-index: -1;
+  border-radius: 5px;
+}
+.contact__info > p {
+  letter-spacing: 10px;
+  font-size: 20px;
+  font-weight: 600;
+}
+.contact__btn {
+  transform: rotate(90deg);
+  background: transparent;
+  border: none;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  border-radius: 50%;
+  font-size: 30px;
+  text-shadow: 0px 0px 4px #333;
+  color: var(--color-firebase);
+  animation: btnAnim infinite 900ms linear;
+}
+@keyframes btnAnim {
+  0% {
+    bottom: 20px;
+  }
+  50% {
+    bottom: 14px;
+  }
+  100% {
+    bottom: 20px;
+  }
+}
+.find{
+  text-align: center;
+  margin-top: 130px;
+  margin-bottom: 130px;
+  color: #333;
+}
+.find > h1, .find > h3{
+  margin-bottom: 30px;
+}
+.find > button{
+  background-color: var(--color-firebase) !important;
+}
+.form{
+margin-top: 90px;
+margin-bottom: 90px;
+}
+.form-control:active,
+.form-control:focus {
+  border: 1px solid var(--color-firebase) !important;
+}
+
+.map > iframe {
+  border: 2px solid#7a7a7a1f !important;
+  width: 100%;
+  height: 100%;
+}
+@media (max-width : 992px){
+  .contact__form{
+    margin-bottom: 20px;  
+  }
+  .map > iframe {
+    height: 400px;
+  }
+}
+@media (max-width : 768px){
+ .contact {
+    height: 400px;
+  } 
+}
+@media (max-width : 576px){
+  .contact {
+    height: 300px;
+  }
+  .find{
+    margin-top: 80px;
+    margin-bottom: 40px;
+  }
+}
+

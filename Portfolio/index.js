@@ -63,10 +63,6 @@ gotoProject.addEventListener('click', e => {
 });
 //projects End
 
-// scroll to specifique area
-// const linkHome = document.querySelector('.link__home');
-// const linkProjects = document.querySelector('.link__projects');
-// const linkContact = document.querySelector('.link__contact');
 const links = document.querySelectorAll('li');
 
 links.forEach(link => {
@@ -94,3 +90,39 @@ window.addEventListener('scroll', () => {
 returnTop.addEventListener('click', () => {
   window.scroll({ top: 0, behavior: 'smooth' });
 });
+
+const langPicker = document.querySelector('.lang__picker');
+const hideLangs = document.querySelector('.hide__langs');
+const arrowRight = document.querySelector('.fa-caret-right');
+const title = document.querySelector('.title');
+const singleLang = document.querySelectorAll('.lang__single');
+let open = false;
+langPicker.addEventListener('click', () => {
+  hideLangs.style.height = open ? '60px' : '0px';
+  arrowRight.style.transform = open ? 'rotate(0deg)' : 'rotate(90deg)';
+  console.log(open);
+  open = !open;
+});
+
+singleLang.forEach(lang => {
+  lang.addEventListener('click', e => {
+    // console.log();
+    if (e.target.dataset.lang == 'fr') {
+      title.innerText = dataLanguage.fr.title;
+    } else if (e.target.dataset.lang == 'ar') {
+      title.innerText = dataLanguage.ar.title;
+    }
+  });
+});
+
+const dataLanguage = {
+  fr: {
+    title: 'bonjour !',
+  },
+  en: {
+    title: 'hello hh !',
+  },
+  ar: {
+    title: 'wach !',
+  },
+};

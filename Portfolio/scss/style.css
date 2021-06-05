@@ -138,6 +138,65 @@ header .navbar nav li:hover {
   }
 }
 
+header .navbar nav .lang__picker {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 60px;
+  position: relative;
+}
+
+header .navbar nav .lang__picker .fa-caret-right {
+  position: absolute;
+  right: 0;
+  -webkit-transition: all 0.4s linear;
+  transition: all 0.4s linear;
+}
+
+header .navbar nav .langs {
+  position: absolute;
+  bottom: -15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 50px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 60px;
+  right: 40px;
+}
+
+header .navbar nav .langs .hide__langs {
+  position: absolute;
+  z-index: 10;
+  bottom: -15px;
+  content: '';
+  width: 60px;
+  height: 60px;
+  background: white;
+  -webkit-transition: all 0.4s linear;
+  transition: all 0.4s linear;
+}
+
+header .navbar nav .langs .lang__single {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.171);
+  padding-bottom: 2px;
+  padding-top: 2px;
+  z-index: 1;
+  cursor: pointer;
+}
+
 header .navbar .navlist {
   -webkit-transform: translateY(0%);
           transform: translateY(0%);
@@ -366,7 +425,8 @@ header .explore i {
 
 .projects__inner .projects__wrapper .projects__single {
   margin-bottom: 50px;
-  cursor: pointer;
+  cursor: -webkit-zoom-in;
+  cursor: zoom-in;
 }
 
 .projects__inner .projects__wrapper .projects__single .item img {

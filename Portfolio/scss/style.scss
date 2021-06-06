@@ -18,7 +18,7 @@ $font-text: 'Nova Mono', monospace;
 $sm: 576px;
 $md: 768px;
 $lg: 992px;
-$xl: 200px;
+$xl: 1200px;
 $xxl: 1400px;
 * {
   box-sizing: border-box;
@@ -66,6 +66,9 @@ header {
           letter-spacing: 1px;
         }
       }
+      @media (max-width: $xl) {
+        flex: 3;
+      }
     }
     nav {
       display: flex;
@@ -74,6 +77,9 @@ header {
       position: initial;
       flex: 2;
       transition: all 0.5s ease;
+      @media (max-width: $xl) {
+        flex: 3;
+      }
       @media (max-width: $md) {
         transform: translateY(-150%);
         position: absolute;
@@ -103,19 +109,19 @@ header {
           }
         }
       }
-      .lang__picker{
+      .lang__picker {
         display: flex;
         justify-content: space-between;
         align-items: center;
         width: 60px;
         position: relative;
-        .fa-caret-right{
+        .fa-caret-right {
           position: absolute;
           right: 0;
           transition: all 0.4s linear;
         }
       }
-      .langs{
+      .langs {
         position: absolute;
         bottom: -15px;
         display: flex;
@@ -124,18 +130,17 @@ header {
         flex-direction: column;
         width: 60px;
         right: 40px;
-        .hide__langs{
-            position: absolute;
-            z-index: 10;
-            bottom: -15px;
-            content: '';
-            width: 60px;
-            height: 60px;
-            background: white;
-            transition: all 0.4s linear;
-
+        .hide__langs {
+          position: absolute;
+          z-index: 10;
+          bottom: -15px;
+          content: '';
+          width: 60px;
+          height: 60px;
+          background: white;
+          transition: all 0.4s linear;
         }
-        .lang__single{
+        .lang__single {
           border-bottom: 1px solid rgba(0, 0, 0, 0.171);
           padding-bottom: 2px;
           padding-top: 2px;
@@ -274,6 +279,9 @@ header {
       text-align: center;
       margin-bottom: 50px;
       position: relative;
+      @media (max-width : $sm){
+        font-size: $h2;
+      }
       &::after {
         position: absolute;
         content: '';
@@ -291,7 +299,7 @@ header {
       margin-top: 100px;
       .projects__single {
         margin-bottom: 50px;
-        cursor:zoom-in;
+        cursor: zoom-in;
         .item {
           img {
             box-shadow: -1px 1px 3px black;
@@ -365,6 +373,9 @@ header {
     font-size: $h1;
     position: relative;
     margin-bottom: 50px;
+    @media (max-width : $sm){
+      font-size: $h2;
+    }
     &::after {
       position: absolute;
       content: '';
@@ -382,8 +393,12 @@ header {
     display: grid;
     grid-template-columns: 50% 50%;
     gap: 10px 20px;
+    @media (max-width: $md) {
+      grid-template-columns: 100%;
+    }
     > div {
       height: max-content;
+      // border: 1px solid black;
     }
     .img__wrapper {
       display: flex;
@@ -392,10 +407,20 @@ header {
         width: 80%;
         height: 400px;
         object-fit: cover;
+        @media (max-width: $sm) {
+          height: 250px;
+          object-fit: cover;
+        }
       }
     }
     .presentation {
+      width: 100%;
       padding-top: 15px;
+      @media (max-width: $md) {
+        text-align: center;
+        padding-left: 20px;
+        padding-right: 20px;
+      }
       h2 {
         color: $suit;
         font-size: $h2;
@@ -412,6 +437,18 @@ header {
       }
       div {
         margin-top: 10px;
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+        @media (max-width: $md) {
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+        }
+        @media (max-width: $sm) {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 10px;
+        }
         span {
           width: max-content;
           padding: 2px 7px;
@@ -420,6 +457,9 @@ header {
           color: $primary;
           font-size: $h3;
           text-transform: capitalize;
+          @media (max-width: $md) {
+            margin: auto;
+          }
         }
       }
     }
@@ -428,28 +468,42 @@ header {
       display: flex;
       flex-direction: column;
       margin-top: 50px;
-      &__upper{
+      @media (max-width: $md) {
+        grid-column: auto / auto;
+      }
+      &__upper {
         display: flex;
         width: 100%;
         justify-content: space-around;
-        .media__item{
+        @media (max-width: $md) {
+          display: flex;
+          flex-direction: column;
+        }
+        .media__item {
           display: flex;
           flex-direction: column;
           align-items: center;
-          i{
+          @media (max-width: $md) {
+            margin-bottom: 20px;
+          }
+          i {
             margin-bottom: 10px;
             color: $suit;
           }
         }
       }
-      &__social{
+      &__social {
         display: flex;
         justify-content: center;
-        a{
+        
+        a {
           margin: 30px 70px;
           text-decoration: none;
           color: $suit;
-          i{
+          @media (max-width : $md){
+            margin: 30px;
+          }
+          i {
             transform: scale(2);
           }
         }
@@ -458,7 +512,7 @@ header {
   }
 }
 //return to top
-.return__top{
+.return__top {
   background: $suit;
   color: $ground;
   padding: 5px 15px;

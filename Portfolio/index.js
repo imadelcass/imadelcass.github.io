@@ -94,9 +94,8 @@ returnTop.addEventListener('click', () => {
 const langPicker = document.querySelector('.lang__picker');
 const hideLangs = document.querySelector('.hide__langs');
 const arrowRight = document.querySelector('.fa-caret-right');
-const title = document.querySelector('.title');
-const singleLang = document.querySelectorAll('.lang__single');
 let open = false;
+const singleLang = document.querySelectorAll('.lang__single');
 langPicker.addEventListener('click', () => {
   hideLangs.style.height = open ? '60px' : '0px';
   arrowRight.style.transform = open ? 'rotate(0deg)' : 'rotate(90deg)';
@@ -104,25 +103,74 @@ langPicker.addEventListener('click', () => {
   open = !open;
 });
 
+const hello = document.querySelectorAll('.hello');
+const name = document.querySelector('.name');
+const field = document.querySelector('.field');
+const contactTitle = document.querySelectorAll('.contact__title');
+const exploreTitle = document.querySelector('.explore__title');
+const projectsTitle = document.querySelector('.projects__title');
+const para = document.querySelector('.para');
+
+const flagIcon = document.querySelectorAll('.flag-icon');
+// let classFlag = 'flag-icon-us';
+
 singleLang.forEach(lang => {
   lang.addEventListener('click', e => {
-    // console.log();
     if (e.target.dataset.lang == 'fr') {
-      title.innerText = dataLanguage.fr.title;
-    } else if (e.target.dataset.lang == 'ar') {
-      title.innerText = dataLanguage.ar.title;
+      flagIcon[0].classList.replace('flag-icon-us', 'flag-icon-fr');
+      flagIcon[1].classList.replace('flag-icon-fr', 'flag-icon-us');
+      e.target.dataset.lang = 'en';
+      hello.forEach(name => (name.innerText = dataLanguage.fr.hello));
+      name.innerText = dataLanguage.fr.name;
+      field.innerText = dataLanguage.fr.field;
+      contactTitle.forEach(
+        name => (name.innerText = dataLanguage.fr.contactTitle)
+      );
+      exploreTitle.innerText = dataLanguage.fr.exploreTitle;
+      projectsTitle.innerText = dataLanguage.fr.projectsTitle;
+      para.innerText = dataLanguage.fr.para;
+    } else if (e.target.dataset.lang == 'en') {
+      flagIcon[0].classList.replace('flag-icon-fr', 'flag-icon-us');
+      flagIcon[1].classList.replace('flag-icon-us', 'flag-icon-fr');
+      e.target.dataset.lang = 'fr';
+
+      hello.forEach(name => (name.innerText = dataLanguage.en.hello));
+      name.innerText = dataLanguage.en.name;
+      field.innerText = dataLanguage.en.field;
+      contactTitle.forEach(
+        name => (name.innerText = dataLanguage.en.contactTitle)
+      );
+      exploreTitle.innerText = dataLanguage.en.exploreTitle;
+      projectsTitle.innerText = dataLanguage.en.projectsTitle;
+      para.innerText = dataLanguage.en.para;
     }
   });
 });
-
 const dataLanguage = {
   fr: {
-    title: 'bonjour !',
+    hello: 'bonjour !',
+    name: "Je m'appelle Imad Elcass",
+    field: ' Développeur web',
+    contactTitle: 'Contactez moi',
+    exploreTitle: 'Explorer',
+    projectsTitle: 'Projets',
+    para: "je m'appelle imad elcass, je suis un développeur web. maintenent je suis étudient et je veux travailler dans ce domain. les technologie que j'utiliser est : ",
   },
   en: {
-    title: 'hello hh !',
-  },
-  ar: {
-    title: 'wach !',
+    hello: 'hello !',
+    name: "I'm Imad Elcass",
+    field: 'Web Developer',
+    contactTitle: 'Contact me',
+    exploreTitle: 'Explore',
+    projectsTitle: 'projects',
+    para: "I'm imad elcass web developer, currently i'm studing IT development.i want to work in this fields and especially web development.the technologie i use right now is : ",
   },
 };
+const langs = document.querySelector('.langs');
+document.addEventListener('click', e => {
+  if (open && !langs.contains(e.target) && !langPicker.contains(e.target)) {
+    arrowRight.style.transform = 'rotate(0deg)';
+    hideLangs.style.height = '60px';
+    open = false;
+  }
+});

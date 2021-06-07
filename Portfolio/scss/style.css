@@ -112,12 +112,8 @@ header .navbar nav {
 
 @media (max-width: 768px) {
   header .navbar nav {
-    -webkit-transform: translateY(-150%);
-            transform: translateY(-150%);
     position: absolute;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    display: none;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -168,6 +164,12 @@ header .navbar nav .lang__picker {
   position: relative;
 }
 
+@media (max-width: 768px) {
+  header .navbar nav .lang__picker {
+    margin-top: 10px;
+  }
+}
+
 header .navbar nav .lang__picker .fa-caret-right {
   position: absolute;
   right: 0;
@@ -193,6 +195,20 @@ header .navbar nav .langs {
   right: 40px;
 }
 
+@media (max-width: 768px) {
+  header .navbar nav .langs {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    right: 0px;
+  }
+}
+
 header .navbar nav .langs .hide__langs {
   position: absolute;
   z-index: 10;
@@ -205,6 +221,14 @@ header .navbar nav .langs .hide__langs {
   transition: all 0.4s linear;
 }
 
+@media (max-width: 768px) {
+  header .navbar nav .langs .hide__langs {
+    background-color: #e3e2df;
+    position: absolute;
+    bottom: -10px;
+  }
+}
+
 header .navbar nav .langs .lang__single {
   border-bottom: 1px solid rgba(0, 0, 0, 0.171);
   padding-bottom: 2px;
@@ -214,8 +238,33 @@ header .navbar nav .langs .lang__single {
 }
 
 header .navbar .navlist {
-  -webkit-transform: translateY(0%);
-          transform: translateY(0%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-animation: displayNav 0.4s linear;
+          animation: displayNav 0.4s linear;
+}
+
+@-webkit-keyframes displayNav {
+  0% {
+    -webkit-transform: translateY(150%);
+            transform: translateY(150%);
+  }
+  100% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}
+
+@keyframes displayNav {
+  0% {
+    -webkit-transform: translateY(150%);
+            transform: translateY(150%);
+  }
+  100% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
 }
 
 header .navbar .burger {

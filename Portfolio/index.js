@@ -12,8 +12,8 @@ explore.addEventListener('click', () => {
 //projects start
 const images = [
   {
-    src: './img/project__menu.png',
-    href: 'http://127.0.0.1:5500/Sidebar/',
+    src: './img/project__moviestore.png',
+    href: 'https://moviestore.vercel.app/',
   },
   {
     src: './img/project__trans.png',

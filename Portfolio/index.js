@@ -17,23 +17,23 @@ const images = [
   },
   {
     src: './img/project__trans.png',
-    href: 'http://127.0.0.1:5500/Transport/',
+    href: 'https://imadelcass.github.io/Transport/',
   },
   {
     src: './img/project__portfolio.png',
-    href: 'http://127.0.0.1:5500/Portfolio/',
+    href: 'https://imadelcass.github.io/Portfolio/',
   },
   {
-    src: './img/project__menu.png',
-    href: 'http://127.0.0.1:5500/Menu/',
+    src: './img/project__moviestore.png',
+    href: 'https://moviestore.vercel.app/',
   },
   {
-    src: './img/project__menu.png',
-    href: 'http://127.0.0.1:5500/Menu/',
+    src: './img/project__trans.png',
+    href: 'https://imadelcass.github.io/Transport/',
   },
   {
-    src: './img/project__menu.png',
-    href: 'http://127.0.0.1:5500/Menu/',
+    src: './img/project__portfolio.png',
+    href: 'https://imadelcass.github.io/Portfolio/',
   },
 ];
 const display = document.querySelector('.display');

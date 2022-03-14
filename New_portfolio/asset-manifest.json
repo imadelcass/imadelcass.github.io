@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/static/css/main.f8474229.css",
+    "main.js": "/static/js/main.67a65d25.js",
+    "static/js/787.1ed0c42c.chunk.js": "/static/js/787.1ed0c42c.chunk.js",
+    "static/media/bimma_pro2.png": "/static/media/bimma_pro2.6d8acb68f9179b66e096.png",
+    "static/media/elcass_imad_CV.png": "/static/media/elcass_imad_CV.6c0274fd08bcd822bdd9.png",
+    "static/media/admin.png": "/static/media/admin.78c845a407fb6f7ca775.png",
+    "static/media/github.png": "/static/media/github.553c66159c5672f25df6.png",
+    "static/media/portfolio.png": "/static/media/portfolio.fa26c8086cd2ad6b37a7.png",
+    "static/media/api.png": "/static/media/api.5149c8ae8096e6eb0c42.png",
+    "static/media/programming.png": "/static/media/programming.d645cd93aade5561dc68.png",
+    "static/media/linkedin.png": "/static/media/linkedin.a99ac5077976502ad824.png",
+    "index.html": "/index.html",
+    "main.f8474229.css.map": "/static/css/main.f8474229.css.map",
+    "main.67a65d25.js.map": "/static/js/main.67a65d25.js.map",
+    "787.1ed0c42c.chunk.js.map": "/static/js/787.1ed0c42c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f8474229.css",
+    "static/js/main.67a65d25.js"
+  ]
+}

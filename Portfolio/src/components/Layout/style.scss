@@ -1,0 +1,9 @@
+$initColor: #1a1a1d;
+$border: 1px solid white;
+.container {
+  background-color: $initColor;
+  .layout {
+    // max-width: 2500px;
+    margin: auto;
+  }
+}

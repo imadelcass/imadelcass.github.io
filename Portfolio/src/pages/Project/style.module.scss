@@ -1,0 +1,237 @@
+$witheClr: #e3e3e7a1;
+$oddClr: #bfbfe710;
+$evenColor: #2b2b2f62;
+$initColor: #1a1a1d;
+$border: 1px solid white;
+
+.container {
+  min-height: calc(100vh - 90px);
+  .title {
+    text-align: center;
+    color: $witheClr;
+    padding-top: 20px;
+    margin-bottom: 50px;
+  }
+  .wrapper {
+    display: flex;
+    .arrow {
+      cursor: pointer;
+      color: $oddClr;
+      width: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &:hover {
+        color: $witheClr;
+      }
+      svg {
+        transform: scale(2);
+      }
+    }
+    .project {
+      width: 60%;
+      margin: auto;
+      .slider {
+        width: 100%;
+        height: 340px;
+        display: flex;
+        margin-bottom: 50px;
+        img {
+          margin: auto;
+          width: 80%;
+          height: 100%;
+          object-fit: contain;
+        }
+        .imgFill {
+          object-fit: fill;
+        }
+        > div {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          cursor: pointer;
+          width: 10%;
+          > svg {
+            transform: scale(1.4);
+            color: $witheClr;
+          }
+        }
+      }
+      .summary {
+        width: 80%;
+        margin: auto;
+        margin-top: 20px;
+        padding: 0 30px;
+        > h1 {
+          font-size: 20px;
+          color: $witheClr;
+          text-transform: uppercase;
+          text-decoration: underline;
+        }
+        > p {
+          color: $witheClr;
+          margin: 20px 0;
+          text-align: justify;
+          line-height: 25px;
+          > span {
+            color: transparent;
+          }
+        }
+      }
+      .code {
+        width: 80%;
+        margin: auto;
+        display: flex;
+        justify-content: end;
+        margin-top: 20px;
+        // padding: 0 30px;
+        img {
+          cursor: pointer;
+          width: 40px;
+        }
+      }
+    }
+  }
+}
+// Large devices (desktops, less than 1200px)
+@media (max-width: 1199.98px) {
+}
+// Medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) {
+}
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 767.98px) {
+  .container {
+    border: $border;
+    .title {
+      text-align: center;
+      color: $witheClr;
+      padding-top: 20px;
+      margin-bottom: 20px;
+    }
+    .wrapper {
+      display: flex;
+      .arrow {
+        cursor: pointer;
+        color: $oddClr;
+        width: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &:hover {
+          color: $witheClr;
+        }
+        svg {
+          transform: scale(1.5);
+        }
+      }
+      .project {
+        width: 100%;
+        margin: auto;
+        .slider {
+          width: 100%;
+          height: 260px;
+          margin-bottom: 50px;
+          img {
+            margin: auto;
+            width: 80%;
+            height: 100%;
+            object-fit: contain;
+          }
+          .imgFill {
+            object-fit: fill;
+          }
+        }
+        .summary {
+          width: 80%;
+          margin: auto;
+          margin-top: 20px;
+          padding: 0 30px;
+          > h1 {
+            font-size: 20px;
+            color: $witheClr;
+            text-transform: uppercase;
+            text-decoration: underline;
+          }
+          > p {
+            font-size: 15px;
+            > span {
+              // color: transparent;
+            }
+          }
+        }
+        .code {
+          img {
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 575.98px) {
+  .container {
+    .title {
+      text-align: center;
+      color: $witheClr;
+      padding-top: 20px;
+      margin-bottom: 20px;
+    }
+    .wrapper {
+      display: flex;
+      .arrow {
+        cursor: pointer;
+        color: $oddClr;
+        width: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &:hover {
+          color: $witheClr;
+        }
+        svg {
+          transform: scale(1.5);
+        }
+      }
+      .project {
+        width: 100%;
+        margin: auto;
+        .slider {
+          width: 100%;
+          height: 260px;
+          margin-bottom: 50px;
+          img {
+            margin: auto;
+            width: 80%;
+            height: 100%;
+            object-fit: contain;
+          }
+          .imgFill {
+            object-fit: fill;
+          }
+        }
+        .summary {
+          width: 80%;
+          margin: auto;
+          margin-top: 20px;
+          padding: 0 30px;
+          > h1 {
+            font-size: 20px;
+            color: $witheClr;
+            text-transform: uppercase;
+            text-decoration: underline;
+          }
+          > p {
+            font-size: 15px;
+            > span {
+              // color: transparent;
+            }
+          }
+        }
+        .code {
+          img {
+          }
+        }
+      }
+    }
+  }
+}

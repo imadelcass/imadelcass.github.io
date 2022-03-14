@@ -1,0 +1,195 @@
+$witheClr: #e3e3e7a1;
+$oddClr: #bfbfe710;
+$evenColor: #2b2b2f62;
+$initColor: #1a1a1d;
+$border: 1px solid white;
+.container {
+  background-color: $initColor;
+  min-height: calc(100vh - 90px);
+  .home {
+    display: flex;
+    width: 100%;
+    height: 600px;
+    .arrow {
+      cursor: pointer;
+      color: $oddClr;
+      width: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &:hover {
+        color: $witheClr;
+      }
+        svg {
+          transform: scale(2);
+        }
+    }
+    .about {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      .presentation {
+        min-height: 170px;
+        padding: 10px;
+        width: 40%;
+        p {
+          color: $witheClr;
+          font-size: 18px;
+          text-align: justify;
+          .name {
+            font-size: 28px;
+            font-weight: 800;
+          }
+        }
+      }
+      a {
+        text-decoration: none;
+        background: $witheClr;
+        color: $initColor;
+        border: none;
+        padding: 5px 10px;
+        cursor: pointer;
+        border-radius: 2px;
+        font-size: 18px;
+      }
+    }
+  }
+  .socialMedia {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    .media {
+      height: 40px;
+      width: 40px;
+      margin-right: 20px;
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+}
+// the max width to applay that style
+@media (max-width: 1199.98px) {
+  .container {
+    .home {
+      .arrow {
+        width: 90px;
+      }
+      .about {
+        .presentation {
+          width: 50%;
+          p {
+            .name {
+              
+            }
+          }
+        }
+        button {
+        }
+      }
+    }
+    .socialMedia {
+      .media {
+        img {
+        }
+      }
+    }
+  }
+}
+@media (max-width: 991.98px) {
+  .container {
+    .home {
+      .arrow {
+        width: 80px;
+      }
+      .about {
+        .presentation {
+          width: 65%;
+          p {
+            .name {
+            }
+          }
+        }
+        button {
+        }
+      }
+    }
+    .socialMedia {
+      .media {
+        img {
+        }
+      }
+    }
+  }
+}
+@media (max-width: 767.98px) {
+  .container {
+    .home {
+      .arrow {
+        width: 60px;
+        svg {
+          transform: scale(1.7);
+        }
+      }
+      .about {
+        .presentation {
+          width: 75%;
+          p {
+            font-size: 12px;
+            text-align: justify;
+            .name {
+              font-size: 22px;
+              font-weight: 800;
+            }
+          }
+        }
+        button {
+        }
+      }
+    }
+    .socialMedia {
+      .media {
+        img {
+        }
+      }
+    }
+  }
+}
+@media (max-width: 575.98px) {
+  .container {
+    .home {
+      .arrow {
+        width: 40px;
+        svg {
+          transform: scale(1.5);
+        }
+      }
+      .about {
+        .presentation {
+          width: 90%;
+          border: none;
+          p {
+            font-size: 8px;
+            text-align: justify;
+            .name {
+              font-size: 18px;
+              font-weight: 800;
+            }
+          }
+        }
+        button {
+        }
+      }
+    }
+    .socialMedia {
+      .media {
+        img {
+        }
+      }
+    }
+  }
+}
